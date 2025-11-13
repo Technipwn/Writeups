@@ -1,0 +1,18 @@
+input: .
+output: .retype
+url: https://technionctf.com
+
+assets:
+  - files
+
+branding:
+  logo: files/logo-dark.png
+
+meta:
+  title: " | Technipwn"
+
+edit:
+  repo: https://github.com/Technipwn/Writeups
+  branch: main
+  label: Edit this page
+  icon: edit
