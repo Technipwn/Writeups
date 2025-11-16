@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.816635285748">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.816641945418">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.11.0">
@@ -21,22 +21,22 @@
     <meta property="og:url" content="https://technionctf.com/web/buckeyectf-authman/">
     <meta property="og:title" content="BuckeyeCTF - AUTHMAN | Technipwn">
     <meta property="og:description" content="passwords won't save you now NOTE: remote can only connect to ports 80/443">
-    <meta property="og:image" content="https://technionctf.com/web/image-5.png">
+    <meta property="og:image" content="https://technionctf.com/files/web/images/authman-1.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://technionctf.com/web/buckeyectf-authman/">
     <meta property="twitter:title" content="BuckeyeCTF - AUTHMAN | Technipwn">
     <meta property="twitter:description" content="passwords won't save you now NOTE: remote can only connect to ports 80/443">
-    <meta property="twitter:image" content="https://technionctf.com/web/image-5.png">
+    <meta property="twitter:image" content="https://technionctf.com/files/web/images/authman-1.png">
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../resources/css/retype.css?v=3.11.0.816635285748" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.11.0.816641945418" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.11.0.816635285748" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.11.0.816641945418" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.11.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0.816635285748" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0.816641945418" data-turbo-eval="false" defer></script>
 
     <link href="/css/custom.css" type="text/css" rel="stylesheet" />
     <style>
@@ -207,7 +207,7 @@
 <p>passwords won&#x27;t save you now NOTE: remote can only connect to ports 80/443</p>
 <p><a href="https://authman.challs.pwnoh.io">https://authman.challs.pwnoh.io</a></p>
 </blockquote>
-<p><a href="../../files/authman.zip" class="no-link inline-flex align-middle items-center font-medium cursor-pointer transition-colors duration-200 ease-out focus:outline-none bg-button-primary hover:bg-button-primary-hover text-button-primary-text px-4 h-10 text-sm rounded-md">
+<p><a href="../../files/web/authman.zip" class="no-link inline-flex align-middle items-center font-medium cursor-pointer transition-colors duration-200 ease-out focus:outline-none bg-button-primary hover:bg-button-primary-hover text-button-primary-text px-4 h-10 text-sm rounded-md">
     <span><svg xmlns="http://www.w3.org/2000/svg" class="mb-px inline-flex mr-2" width="18" height="18" viewBox="0 0 24 24" role="presentation"><g fill="currentColor"><path d="M4.75 17.25a.75.75 0 0 1 .75.75v2.25c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V18a.75.75 0 0 1 1.5 0v2.25A1.75 1.75 0 0 1 18.25 22H5.75A1.75 1.75 0 0 1 4 20.25V18a.75.75 0 0 1 .75-.75Z"/><path d="M5.22 9.97a.749.749 0 0 1 1.06 0l4.97 4.969V2.75a.75.75 0 0 1 1.5 0v12.189l4.97-4.969a.749.749 0 1 1 1.06 1.06l-6.25 6.25a.749.749 0 0 1-1.06 0l-6.25-6.25a.749.749 0 0 1 0-1.06Z"/></g></svg></span>
     <span>authman.zip</span>
 </a></p>
@@ -217,7 +217,17 @@
         <span>Solution</span>
     </h2>
 </doc-anchor-target>
+<p><figure class="content-center">
+    <img src="../../files/web/images/authman-1.png" alt="" class="rounded-image-rounded border-image-border border-image-border-width" />
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
 <p>Looking at the source code (<code v-pre>auth.html</code>, <code v-pre>routes.py</code>), we can tell that in order to get the flag, we need to authenticate on the <code v-pre>/auth</code> endpoint.</p>
+<p><figure class="content-center">
+    <img src="../../files/web/images/authman-2.png" alt="" class="rounded-image-rounded border-image-border border-image-border-width" />
+    <figcaption class="caption"></figcaption>
+</figure>
+</p>
 <p>Looking at the provided <code v-pre>routes.py</code>, we can see that the authentication is done using Digest access authentication (<code v-pre>HTTPDigestAuth</code>), which is an authentication method that doesn&#x27;t send the password in plaintext, but uses a challenge-response mechanism:</p>
 <ol>
 <li>Client sends a request to the server that doesn&#x27;t contain any credentials.</li>
@@ -226,7 +236,7 @@
 <li>Server performs the same hash calculation with the stored password and compares it to the hash sent by the client. If they match, the client is authenticated and will receive access to the protected resource.</li>
 </ol>
 <p><figure class="content-center">
-    <img src="../image-5.png" alt="" class="rounded-image-rounded border-image-border border-image-border-width" />
+    <img src="image-5.png" alt="" class="rounded-image-rounded border-image-border border-image-border-width" />
     <figcaption class="caption"></figcaption>
 </figure>
 </p>
@@ -242,14 +252,14 @@
 <li>Our MITM server will pass the Authorization header to the <code v-pre>/auth</code> endpoint, which will authenticate us and return the flag.</li>
 </ol>
 <p><figure class="content-center">
-    <img src="../image-6.png" alt="" class="rounded-image-rounded border-image-border border-image-border-width" />
+    <img src="image-6.png" alt="" class="rounded-image-rounded border-image-border border-image-border-width" />
     <figcaption class="caption"></figcaption>
 </figure>
 </p>
 <hr>
 <p>To implement this, we can use Flask to create a simple MITM server that will relay the requests between the client and the real server, and host it on a public server (e.g., using ngrok)</p>
 <ol>
-<li>run the server: <a href="../../files/buckeye2025_authman_solve.py">link to code</a></li>
+<li>run the server: <a href="../../files/web/buckeye2025_authman_solve.py">link to code</a></li>
 <li>Setup ngrok to expose the server to the internet: <code v-pre>ngrok http 8080</code></li>
 <li>Call <code v-pre>/api/check</code> with the <code v-pre>Referer</code> header set to our ngrok URL:
 <code v-pre>curl -H &quot;Referer: http://&lt;ngrok-url&gt;&quot; https://authman.challs.pwnoh.io/api/check</code></li>
