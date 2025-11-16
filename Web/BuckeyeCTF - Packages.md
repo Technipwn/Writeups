@@ -1,5 +1,5 @@
 ---
-tags: [SQL Injection]
+tags: [Easy, SQL Injection]
 ---
 
 # BuckeyeCTF - Packages
@@ -37,6 +37,8 @@ And use it to read the flag file:
 ```
 ?distro=" UNION SELECT readfile('flag.txt'),2,3,4--
 ```
+
+Note: You can execute `readfile` only after loading the extension.
 
 
 #### Flag

@@ -1,3 +1,7 @@
+---
+tags: [Easy, Type Confusion]
+---
+
 # BuckeyeCTF - BIG CHUNGUS
 
 #### Challenge Description

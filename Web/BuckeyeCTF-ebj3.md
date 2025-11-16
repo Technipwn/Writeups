@@ -1,5 +1,5 @@
 ---
-tags: [Beginners, SSRF]
+tags: [Very Easy, SSRF]
 ---
 # BuckeyeCTF - ebj3
 
