@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.816642022469">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.11.0.816642356926">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.11.0">
@@ -32,11 +32,11 @@
 
     <script data-cfasync="false">(function(){var cl=document.documentElement.classList,ls=localStorage.getItem("retype_scheme"),hd=cl.contains("dark"),hl=cl.contains("light"),wm=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(ls==="dark"||(!ls&&wm&&!hd&&!hl)){cl.remove("light");cl.add("dark")}else if(ls==="light"||(!ls&&!wm&&!hd&&!hl)){cl.remove("dark");cl.add("light")}})();</script>
 
-    <link href="../../resources/css/retype.css?v=3.11.0.816642022469" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.11.0.816642356926" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.11.0.816642022469" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.11.0.816642356926" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.11.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0.816642022469" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.11.0.816642356926" data-turbo-eval="false" defer></script>
 
     <link href="/css/custom.css" type="text/css" rel="stylesheet" />
     <style>
@@ -217,17 +217,7 @@
         <span>Solution</span>
     </h2>
 </doc-anchor-target>
-<p><figure class="content-center">
-    <img src="../../files/web/images/authman-1.png" alt="" class="rounded-image-rounded border-image-border border-image-border-width" />
-    <figcaption class="caption"></figcaption>
-</figure>
-</p>
 <p>Looking at the source code (<code v-pre>auth.html</code>, <code v-pre>routes.py</code>), we can tell that in order to get the flag, we need to authenticate on the <code v-pre>/auth</code> endpoint.</p>
-<p><figure class="content-center">
-    <img src="../../files/web/images/authman-2.png" alt="" class="rounded-image-rounded border-image-border border-image-border-width" />
-    <figcaption class="caption"></figcaption>
-</figure>
-</p>
 <p>Looking at the provided <code v-pre>routes.py</code>, we can see that the authentication is done using Digest access authentication (<code v-pre>HTTPDigestAuth</code>), which is an authentication method that doesn&#x27;t send the password in plaintext, but uses a challenge-response mechanism:</p>
 <ol>
 <li>Client sends a request to the server that doesn&#x27;t contain any credentials.</li>
@@ -236,7 +226,7 @@
 <li>Server performs the same hash calculation with the stored password and compares it to the hash sent by the client. If they match, the client is authenticated and will receive access to the protected resource.</li>
 </ol>
 <p><figure class="content-center">
-    <img src="image-5.png" alt="" class="rounded-image-rounded border-image-border border-image-border-width" />
+    <img src="../../files/web/images/authman-1.png" alt="" class="rounded-image-rounded border-image-border border-image-border-width" />
     <figcaption class="caption"></figcaption>
 </figure>
 </p>
@@ -252,7 +242,7 @@
 <li>Our MITM server will pass the Authorization header to the <code v-pre>/auth</code> endpoint, which will authenticate us and return the flag.</li>
 </ol>
 <p><figure class="content-center">
-    <img src="image-6.png" alt="" class="rounded-image-rounded border-image-border border-image-border-width" />
+    <img src="../../files/web/images/authman-2.png" alt="" class="rounded-image-rounded border-image-border border-image-border-width" />
     <figcaption class="caption"></figcaption>
 </figure>
 </p>
