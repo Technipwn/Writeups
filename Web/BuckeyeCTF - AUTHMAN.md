@@ -13,11 +13,7 @@ tags: [Medium, MITM, BuckeyeCTF 2025]
 
 ## Solution
 
-![](../files/web/images/authman-1.png)
-
 Looking at the source code (`auth.html`, `routes.py`), we can tell that in order to get the flag, we need to authenticate on the `/auth` endpoint.
-
-![](../files/web/images/authman-2.png)
 
 Looking at the provided `routes.py`, we can see that the authentication is done using Digest access authentication (`HTTPDigestAuth`), which is an authentication method that doesn't send the password in plaintext, but uses a challenge-response mechanism:
 
@@ -26,7 +22,7 @@ Looking at the provided `routes.py`, we can see that the authentication is done 
 3. Client uses the nonce, username, password, HTTP method, and requested URL to create a hash (MD5 by default) and sends it back to the server in the "Authorization" header.
 4. Server performs the same hash calculation with the stored password and compares it to the hash sent by the client. If they match, the client is authenticated and will receive access to the protected resource.
 
-![](image-5.png)
+![](../files/web/images/authman-1.png)
 
 ---
 
@@ -42,7 +38,7 @@ So in order to authenticate on `/auth`, we can set up a server that will act as 
 3. `/api/check` will compute the Authorization header using its stored username and password, and send it to our MITM server.
 4. Our MITM server will pass the Authorization header to the `/auth` endpoint, which will authenticate us and return the flag.
 
-![](image-6.png)
+![](../files/web/images/authman-2.png)
 
 ---
 
