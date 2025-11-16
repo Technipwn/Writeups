@@ -1,5 +1,5 @@
 ---
-tags: [Very Easy, SSRF]
+tags: [Very Easy, SSRF, BuckeyeCTF 2025]
 ---
 # BuckeyeCTF - ebj3
 

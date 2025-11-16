@@ -1,5 +1,5 @@
 ---
-tags: [Easy, Type Confusion]
+tags: [Easy, Type Confusion, BuckeyeCTF 2025]
 ---
 
 # BuckeyeCTF - BIG CHUNGUS

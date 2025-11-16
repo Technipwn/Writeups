@@ -1,5 +1,5 @@
 ---
-tags: [Easy, SQL Injection]
+tags: [Easy, SQL Injection, BuckeyeCTF 2025]
 ---
 
 # BuckeyeCTF - Packages
