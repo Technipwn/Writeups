@@ -10,7 +10,7 @@ tags: [Easy, SQL Injection, BuckeyeCTF 2025]
 >[https://packages.challs.pwnoh.io](https://packages.challs.pwnoh.io)
 
 
-[!button icon="download" text="packages.zip"](../files/packages.zip)
+[!button icon="download" text="packages.zip"](../files/web/packages.zip)
 
 ## Solution
 

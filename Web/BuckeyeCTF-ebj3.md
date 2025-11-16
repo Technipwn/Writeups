@@ -8,7 +8,7 @@ tags: [Very Easy, SSRF, BuckeyeCTF 2025]
 >
 >[https://ebg13.challs.pwnoh.io](https://ebg13.challs.pwnoh.io)
 
-[!button icon="download" text="ebg13.zip"](../../files/ebg13.zip)
+[!button icon="download" text="ebg13.zip"](../files/web/ebg13.zip)
 
 ## Solution
 

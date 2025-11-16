@@ -9,7 +9,7 @@ tags: [Easy, Type Confusion, BuckeyeCTF 2025]
 >
 > [https://big-chungus.challs.pwnoh.io](https://big-chungus.challs.pwnoh.io)
 
-[!button icon="download" text="big-chungus.zip"](../files/big-chungus.zip)
+[!button icon="download" text="big-chungus.zip"](../files/web/big-chungus.zip)
 
 ## Solution
 
