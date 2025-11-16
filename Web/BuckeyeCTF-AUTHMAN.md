@@ -13,7 +13,11 @@ tags: [Medium, MITM, BuckeyeCTF 2025]
 
 ## Solution
 
+![](../files/web/images/authman-1.png)
+
 Looking at the source code (`auth.html`, `routes.py`), we can tell that in order to get the flag, we need to authenticate on the `/auth` endpoint.
+
+![](../files/web/images/authman-2.png)
 
 Looking at the provided `routes.py`, we can see that the authentication is done using Digest access authentication (`HTTPDigestAuth`), which is an authentication method that doesn't send the password in plaintext, but uses a challenge-response mechanism:
 

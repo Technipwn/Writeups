@@ -14,7 +14,7 @@ tags: [Easy, SQL Injection, BuckeyeCTF 2025]
 
 ## Solution
 
-![](image.png)
+![](../files/web/images/packages-1.png)
 
 We are given a database of Debian distros and packages, with a search functionality.
 It is simple to check for SQL injection and see that it works.

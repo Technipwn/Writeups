@@ -15,7 +15,7 @@ tags: [Very Easy, SSRF, BuckeyeCTF 2025]
 The description of the challenge in ROT13 [(Cyberchef)](https://gchq.github.io/CyberChef/#recipe=ROT13(true,true,false,13)) says
 > I made an app that lets you view the rot13 version of any website!
 
-![](image-3.png)
+![](../files/web/images/ebj3-1.png)
 
 Looking at the code, we can tell that the flag is shown only if the request is done from localhost (127.0.0.1 or similar)
 
@@ -24,7 +24,7 @@ Basically:
 
 We can simply tell the server to access itself on the /admin endpoint, which will get us a ROT13 flag (we know to use port 3000 as the server is configured on it)
 
-![](image-4.png)
+![](../files/web/images/ebj3-2.png)
 get us 
 
 `Uryyb frys! Gur synt vf opgs{jung_unccraf_vs_v_hfr_guvf_jrofvgr_ba_vgfrys}.`

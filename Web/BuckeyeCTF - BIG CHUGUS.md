@@ -13,7 +13,7 @@ tags: [Easy, Type Confusion, BuckeyeCTF 2025]
 
 ## Solution
 
-![](image-1.png){width="40%"}
+![](../files/web/images/big-chungus-1.png){width="40%"}
 
 Looking at the given 'index.js' we can see the flag will be revealed when this condition is true:
 
@@ -29,7 +29,7 @@ For example, on https://big-chungus.challs.pwnoh.io/?username=hi we get:
 
 When attempting to use the username as an array, to trick the length check (ie. `https://big-chungus.challs.pwnoh.io/?username[100]=hi`), we see the username is printed as `Welcome, [object Object]...`
 
-![](image-2.png){width="40%"}
+![](../files/web/images/big-chungus-2.png){width="40%"}
 
 This means that the username is being treated as an object, and thus we can add properties to set the length to a very large number.
 
